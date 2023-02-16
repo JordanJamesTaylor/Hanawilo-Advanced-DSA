@@ -99,12 +99,12 @@ class Queue{
 
 let queue = new Queue();
 
-console.log('ENQUEUE');
-queue.enqueue('Biscuit');
-queue.enqueue('says');
-queue.enqueue("'Hey Tony!'");
-console.log(queue);
-console.log('-----------------------------------------------------------------------------\n');
+// console.log('ENQUEUE');
+// queue.enqueue('Biscuit');
+// queue.enqueue('says');
+// queue.enqueue("'Hey Tony!'");
+// console.log(queue);
+// console.log('-----------------------------------------------------------------------------\n');
 
 // console.log('DEQUEUE');
 // console.log('REMOVED NODE ---> ', queue.dequeue());
@@ -118,6 +118,6 @@ console.log('-------------------------------------------------------------------
 // console.log(queue.isEmpty());
 // console.log('-----------------------------------------------------------------------------\n');
 
-console.log('PRINT QUEUE');
-console.log(queue.printQueue());
-console.log('-----------------------------------------------------------------------------\n');
+// console.log('PRINT QUEUE');
+// console.log(queue.printQueue());
+// console.log('-----------------------------------------------------------------------------\n');

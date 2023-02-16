@@ -8,7 +8,17 @@
     Challenge 3: Create 3 additional methods that are:  
         • peek (retrieves the element at the top of the stack, WITHOUT removing it) 
         • isEmpty (checks if the stack is empty – should return true or false)  
-        • printStack (prints the elements in the stack)  
+        • printStack (prints the elements in the stack)
+
+    Challenge 4: Valid Parenthesis 
+    
+    Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the 
+    input string is valid. 
+        
+    An input string is valid if: 
+        • open brackets must be closed by the same type of brackets. 
+        • open brackets must be closed in the correct order. 
+        • every close bracket has a corresponding open bracket of the same type. 
 */
 
 class Node{
@@ -58,9 +68,7 @@ class Stack{
 
     peek(){
         if(!this.top) return null;
-        
-        // Not sure if you want the node or just the value
-        // return this.top;
+
         return this.top.value;
     }
 
@@ -92,6 +100,31 @@ class Stack{
     }
 }
 
+function validString(str){
+
+    if((str.length % 2) !== 0) return false;
+    if(str[0] === ')' || str[0] === ']' || str[0] === '}')return false;
+    if(str[str.length-1] === '(' || str[str.length-1] === '[' || str[str.length-1] === '{')return false;
+
+    let strStack = new Stack();
+
+    for(let  i = 0; i < str.length; i++){
+        if(str[i] === "(" || str[i] === "[" || str[i] ===  "{"){
+            strStack.push(str[i]);
+        }else if(str[i] === ")" && strStack.top.value === "("){
+            strStack.pop(); 
+        } else if(str[i] === "]" && strStack.top.value === "["){
+            strStack.pop();
+        }else if(str[i] === "}" && strStack.top.value === "{"){
+            strStack.pop();
+        }else{
+            return false;
+        }
+    }
+
+    return strStack.size === 0;
+}
+
 let stack = new Stack();
 
 // console.log('PUSH');
@@ -115,4 +148,10 @@ let stack = new Stack();
 
 // console.log('PRINT STACK');
 // console.log(stack.printStack());
+// console.log('-----------------------------------------------------------------------------\n');
+
+// console.log('IS VALID STRING');
+// console.log(validString("()"));
+// console.log(validString("()[]{}"));
+// console.log(validString("(]"));
 // console.log('-----------------------------------------------------------------------------\n');

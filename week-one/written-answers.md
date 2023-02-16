@@ -15,7 +15,7 @@ FIFO Behaviour  means:
     - Nodes are added to the end of the queue.
     - Nodes are removed from the front of the queue.
 
-                TO-DO: ADD DIAGRAM!
+    SEE PHOTO
 
 
 
@@ -32,4 +32,17 @@ LIFO Behaviour  means:
     - Nodes are added to the top of the stack.
     - Nodes are removed from the top of the stack.
 
-                TO-DO: ADD DIAGRAM!
+    SEE PHOTO
+
+Challenge: Identify each tree as:
+    - Tree
+    - Binary Tree
+    - Binary Search Tree
+    - N/A                
+
+Tree #1 = Binary Tree
+Tree #2 = Binary Search Tree
+Tree #3 = Tree
+Tree #4 = Binary Search Tree
+Tree #5 = N/A
+Tree #6 = N/A     
