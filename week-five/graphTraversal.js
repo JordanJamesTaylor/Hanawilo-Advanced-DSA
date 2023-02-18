@@ -63,14 +63,11 @@ class Graph{
 
     findOddVals(str){
         let arr;
-        let results = [];
 
         if(str.toLowerCase() == 'dfs') arr = this.recursiveDFS();
         if(str.toLowerCase() == 'bfs') arr = this.recursiveBFS();
 
-        results = arr.filter(val => parseInt(val) % 2 !== 0);
-
-        return results;
+        return arr.filter(val => parseInt(val) % 2 !== 0);
     }
 
     showVertices(){
@@ -112,4 +109,4 @@ g2.addEdge("0", "3");
 g2.addEdge("0", "1");   
 g2.addEdge("2", "4");
 
-console.log(g2.showVertices()); // [ '0', '2', '4', '3', '1' ]
+g2.showVertices(); // [ '0', '2', '4', '3', '1' ]
